@@ -1,4 +1,6 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card'
+import CardDeck from 'react-bootstrap/CardDeck'
 // import encrpt from './images/encrpt.gif'
 import react from './images/react.png'
 // import type from './images/type.gif'
@@ -8,88 +10,67 @@ import jsps from './images/js-ps.png'
 import './Blog.css'
 const Blog = () => {
     return (
-        <div className="blog">
+        <div className="blog ">
+            <div class="container blogBody">
+                <h2>My Blog On Medium</h2>
 
-{/*********************************************************First Blog Card Start ************************************************/}
-        <div class="container blogBody container-color">
-            <h2 class="headline">My Blog On Medium</h2>
-            <br/>
-        <div class="card-deck">
-{/*********First Card Start***********/}
-            <div class="card" style={{width: "18rem"}}>
-                <img src={js} class="card-img-top" alt="..."/>
-                <div class="card-body">
-                    <h5 class="card-title">Let's Start a Journey With JavaScript.</h5>
-                    <p class="card-text">A simple overview about JavaScript.  Some basic concepts about JavaScript and others. </p>
-                    <a href="https://sakibfset13.medium.com/lets-start-a-journey-with-javascript-ca4485adf2e3" class="btn btn-primary" target="_blank" rel="noreferrer">Read Full Article</a>
+            <div className="row card-deck">
+                <CardDeck className="d-flex justify-content-around">
+                    <Card className="col-6 col-md-4" style={{width: "18rem"}}>
+                        <Card.Img variant="top" src={js} />
+                        <Card.Body>
+                        <Card.Title>Let's Start a Journey With JavaScript</Card.Title>
+                        <Card.Text>
+                        A simple overview about JavaScript.  Some basic concepts about JavaScript and others
+                        </Card.Text>
+                        </Card.Body>
+                        <Card.Footer className="d-flex justify-content-around">
+                        <button type="button" class="btn btn-secondary">Link</button>
+                        </Card.Footer>
+                    </Card>
+                    <Card className="col-6 col-md-4" style={{width: "18rem"}}>
+                        <Card.Img variant="top" src={react} />
+                        <Card.Body>
+                        <Card.Title>Start with React</Card.Title>
+                        <Card.Text>
+                            This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to
+                            show that equal height action.
+                        </Card.Text>
+                        </Card.Body>
+                        <Card.Footer className="d-flex justify-content-around">
+                        <button type="button" class="btn btn-secondary">Link</button>
+                        </Card.Footer>
+                    </Card>
+                    <Card className="col-6 col-md-4" style={{width: "18rem"}}>
+                        <Card.Img variant="top" src={jsps} />
+                        <Card.Body>
+                        <Card.Title>Simple Problem: Solution with JavaScript</Card.Title>
+                        <Card.Text>
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </Card.Text>
+                        </Card.Body>
+                        <Card.Footer className="d-flex justify-content-around">
+                        <button type="button" class="btn btn-secondary">Link</button>
+                        </Card.Footer>
+                    </Card>
+                    <Card className="col-6 col-md-4" style={{width: "18rem"}}>
+                        <Card.Img variant="top" src={react} />
+                        <Card.Body>
+                        <Card.Title>Start With React</Card.Title>
+                        <Card.Text>
+                            This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to
+                            show that equal height action.
+                        </Card.Text>
+                        </Card.Body>
+                        <Card.Footer className="d-flex justify-content-around">
+                        <button type="button" class="btn btn-secondary">Link</button>
+                        </Card.Footer>
+                    </Card>
+                </CardDeck>
                 </div>
             </div>
-            
-{/*********First Card End***********/}
-
-{/*********Second Card Start***********/}
-        <div class="card" style={{width: "18rem"}}>
-                <img src={react} class="card-img-top" alt="..."/>
-                <div class="card-body">
-                    <h5 class="card-title">Start With React</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="https://sakibfset13.medium.com/hello-react-59b4dd2d46ff" class="btn btn-primary" target="_blank" rel="noreferrer">Read Full Article</a>
-                </div>
-            </div>
-{/*********Second Card End***********/}
-
-{/*********Third Card Start***********/}
-            <div class="card" style={{width: "18rem"}}>
-                <img src={jsps} class="card-img-top" alt="..."/>
-                <div class="card-body">
-                    <h5 class="card-title">Simple Problem: Solution with JavaScript</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="https://sakibfset13.medium.com/simple-problem-solution-with-javascript-de78478b54c9" class="btn btn-primary" target="_blank" rel="noreferrer">Read Full Article</a>
-                </div>
-            </div>
-{/*********Third Card End***********/}
-            </div>
-        
-{/*********************************************************First Blog Card End ***************************************************/}
-
-            <br/>
-{/*******************************************************Second Blog Card Start *************************************************/}
-        <div class="card-deck">
-{/*********First Card Start***********/}
-            {/* <div class="card" style={{width: "18rem"}}>
-                <img src={type} class="card-img-top" alt="..."/>
-                <div class="card-body">
-                    <h5 class="card-title">React-typical</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="https://medium.com/@sakibfset13" class="btn btn-primary" target="_blank" rel="noreferrer">Read Full Article</a>
-                </div>
-            </div> */}
-{/*********First Card End***********/}
-
-{/*********Second Card Start***********/}
-            {/* <div class="card" style={{width: "18rem"}}>
-                <img src={encrpt} class="card-img-top" alt="..."/>
-                <div class="card-body">
-                    <h5 class="card-title">use-dencrypt-effect</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="https://medium.com/@sakibfset13" class="btn btn-primary" target="_blank" rel="noreferrer">Read Full Article</a>
-                </div>
-            </div> */}
-{/*********Second Card End***********/}
-
-{/*********Third Card Start***********/}
-            {/* <div class="card" style={{width: "18rem"}}>
-                <img src={fontawsome} class="card-img-top" alt="..."/>
-                <div class="card-body">
-                    <h5 class="card-title">Using Fontawsome in React</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="https://medium.com/@sakibfset13" class="btn btn-primary" target="_blank" rel="noreferrer">Read Full Article</a>
-                </div>
-            </div> */}
-{/*********Third Card End***********/}
-            </div>
-{/*******************************************************Second Blog Card Start *************************************************/}
-         </div>
         </div>
     );
 };
