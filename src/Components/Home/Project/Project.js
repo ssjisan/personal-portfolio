@@ -10,9 +10,9 @@ import CardDeck from 'react-bootstrap/CardDeck'
 const Project = () => {
 
     return (
-        <div className="project-background ">
+        <div>
             <div class="container blogBody">
-                <h2>My Blog On Medium</h2>
+                <h2>Projects</h2>
 
             <div className="row card-deck">
                 <CardDeck className="d-flex justify-content-around">
@@ -25,8 +25,8 @@ const Project = () => {
                         </Card.Text>
                         </Card.Body>
                         <Card.Footer className="d-flex justify-content-around">
-                        <button type="button" class="btn btn-secondary">Link</button>
-                        <button type="button" class="btn btn-secondary">Link</button>
+                        <button type="button" class="btn btn-info">Live</button>
+                        <button type="button" class="btn btn-dark">Github</button>
                         </Card.Footer>
                     </Card>
                     <Card className="col-6 col-md-4" style={{width: "18rem"}}>
@@ -38,8 +38,8 @@ const Project = () => {
                         </Card.Text>
                         </Card.Body>
                         <Card.Footer className="d-flex justify-content-around">
-                        <button type="button" class="btn btn-secondary">Link</button>
-                        <button type="button" class="btn btn-secondary">Link</button>
+                        <button type="button" class="btn btn-info">Live</button>
+                        <button type="button" class="btn btn-dark">Github</button>
                         </Card.Footer>
                     </Card>
                     <Card className="col-6 col-md-4" style={{width: "18rem"}}>
@@ -51,11 +51,15 @@ const Project = () => {
                         </Card.Text>
                         </Card.Body>
                         <Card.Footer className="d-flex justify-content-around">
-                        <button type="button" class="btn btn-secondary">Link</button>
-                        <button type="button" class="btn btn-secondary">Link</button>
+                        <button type="button" class="btn btn-info">Live</button>
+                        <button type="button" class="btn btn-dark">github</button>
                         </Card.Footer>
                     </Card>
                 </CardDeck>
+                </div>
+                    <br/>
+                <div>
+                    <button type="button" class="btn btn-warning">Find More Projects</button>
                 </div>
             </div>
         </div>

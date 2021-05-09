@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
 
- 
+ .footer {
+    position: absolute;
+    margin-bottom: 100vh;
+ }
 
  .container-fluid {
      overflow: hidden;
-     margin-top: 250px;
      background: #262626;
      color: #ffffff !important;
      margin-bottom: 0;

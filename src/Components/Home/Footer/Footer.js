@@ -7,7 +7,7 @@ import resume from '../../resume.pdf';
 const Footer = () => {
     return (
         
-        <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
+        <div class="container-fluid pb-0 mb-0 justify-content-center text-light footer">
      <footer>
          <div class="row my-5 justify-content-center py-5">
              <div class="col-11">

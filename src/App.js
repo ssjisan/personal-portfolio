@@ -16,28 +16,30 @@ import NavBar from './Components/NavBar/NavBar';
 function App() {
   return (
     <Router>
-      <NavBar></NavBar> 
-      <Switch>
-      <Route exact path="/">
-          <Home></Home>
-        </Route>
-        <Route path="/projects">
-          <Projects></Projects>
-        </Route>
-        {/* <Route path="/contact">
-          <Contact></Contact>
-        </Route> */}
-        <Route path="/blog">
-          <Blog></Blog>
-        </Route>
-        {/* <Route path="/myself">
-          <Myself></Myself>
-        </Route> */}
-        <Route>
-          <Home></Home>
-        </Route>
-      </Switch>
+      <NavBar></NavBar>
+      
+        <Switch>
+          <Route exact path="/">
+              <Home></Home>
+            </Route>
+          <Route path="/projects">
+            <Projects></Projects>
+          </Route>
+          {/* <Route path="/contact">
+            <Contact></Contact>
+          </Route> */}
+          <Route path="/blog">
+            <Blog></Blog>
+          </Route>
+          {/* <Route path="/myself">
+            <Myself></Myself>
+          </Route> */}
+          <Route>
+            <Home></Home>
+          </Route>
+        </Switch>
     </Router>
+    
   );
 }
 
