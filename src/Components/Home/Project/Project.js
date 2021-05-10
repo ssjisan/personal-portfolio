@@ -1,23 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Link} from "react-router-dom";
+import AOS from 'aos';
 import "./Project.css"
-import ca from '../../Projects/image/carousel/ca.jpg';
-import va from '../../Projects/image/carousel/vn.jpg';
-import wf from '../../Projects/image/carousel/wf.jpg';
 import Card from 'react-bootstrap/Card'
 import CardDeck from 'react-bootstrap/CardDeck'
-  
-const Project = () => {
+import creative from '../../Projects/image/ca.jpg';
+import volunteer from '../../Projects/image/vn.jpg';
+import weather from '../../Projects/image/wf.jpg';
 
+ 
+const Project = () => {
+    useEffect(()=>{ 
+        AOS.init({duration:2000})
+    }, [])
     return (
         <div>
-            <div class="container blogBody">
+            <div class="container projectBody">
                 <h2>Projects</h2>
 
             <div className="row card-deck">
-                <CardDeck className="d-flex justify-content-around">
-                    <Card className="col-6 col-md-4" style={{width: "18rem"}}>
-                        <Card.Img variant="top" src={ca} />
+                <CardDeck className="row justify-content-around">
+                    <Card className="col-6 col-md-4 mb-2" style={{width: "18rem"}}data-aos="flip-left">
+                        <Card.Img variant="top" src={creative} />
                         <Card.Body>
                         <Card.Title>Creative Agency</Card.Title>
                         <Card.Text>
@@ -25,12 +29,12 @@ const Project = () => {
                         </Card.Text>
                         </Card.Body>
                         <Card.Footer className="d-flex justify-content-around">
-                        <button type="button" class="btn btn-info">Live</button>
-                        <button type="button" class="btn btn-dark">Github</button>
+                        <a href="https://creative-agency-client-site.web.app/" target="_blank" rel="noreferrer"><button type="button" class="btn btn-info">Live</button></a>
+                        <a href="https://github.com/ssjisan/creative-agency" target="_blank" rel="noreferrer"><button type="button" class="btn btn-dark">Github</button></a>
                         </Card.Footer>
                     </Card>
-                    <Card className="col-6 col-md-4" style={{width: "18rem"}}>
-                        <Card.Img variant="top" src={va} />
+                    <Card className="col-6 col-md-4 mb-2" style={{width: "18rem"}} data-aos="flip-down">
+                        <Card.Img variant="top" src={volunteer} />
                         <Card.Body>
                         <Card.Title>Volunteer Network</Card.Title>
                         <Card.Text>
@@ -38,12 +42,12 @@ const Project = () => {
                         </Card.Text>
                         </Card.Body>
                         <Card.Footer className="d-flex justify-content-around">
-                        <button type="button" class="btn btn-info">Live</button>
-                        <button type="button" class="btn btn-dark">Github</button>
+                        <a href="https://volunteer-network-site-6aa3d.web.app/" target="_blank" rel="noreferrer"><button type="button" class="btn btn-info">Live</button></a>
+                        <a href="https://github.com/ssjisan/volunteer-netwrok-site" target="_blank" rel="noreferrer"><button type="button" class="btn btn-dark">Github</button></a>
                         </Card.Footer>
                     </Card>
-                    <Card className="col-6 col-md-4" style={{width: "18rem"}}>
-                        <Card.Img variant="top" src={wf} />
+                    <Card className="col-6 col-md-4 mb-2" style={{width: "18rem"}} data-aos="flip-right">
+                        <Card.Img variant="top" src={weather} />
                         <Card.Body>
                         <Card.Title>Weather forecast</Card.Title>
                         <Card.Text>
@@ -51,15 +55,15 @@ const Project = () => {
                         </Card.Text>
                         </Card.Body>
                         <Card.Footer className="d-flex justify-content-around">
-                        <button type="button" class="btn btn-info">Live</button>
-                        <button type="button" class="btn btn-dark">github</button>
+                        <a href="https://ssjisan.github.io/weather-app/" target="_blank" rel="noreferrer"><button type="button" class="btn btn-info">Live</button></a>
+                        <a href="https://github.com/ssjisan/weather-app" target="_blank" rel="noreferrer"><button type="button" class="btn btn-dark">github</button></a>
                         </Card.Footer>
                     </Card>
                 </CardDeck>
                 </div>
                     <br/>
-                <div>
-                    <button type="button" class="btn btn-warning">Find More Projects</button>
+                <div data-aos="zoom-out-up">
+                <Link to="/projects"><button type="button" class="btn btn-warning" >Find More Projects</button></Link> 
                 </div>
             </div>
         </div>
